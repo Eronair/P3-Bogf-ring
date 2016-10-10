@@ -1,0 +1,78 @@
+\documentclass[a4paper,11pt,fleqn,twoside,openright]{memoir} 	% Openright aabner kapitler paa hoejresider (openany begge)
+\input{preamble_ida15}
+\raggedbottom
+
+\begin{document}
+
+\frontmatter
+
+\include{formalia/frontpage}
+\cleardoublepage
+\include{formalia/title}
+\cleardoublepage
+
+\chapter*{Preface}
+\include{formalia/preface}
+
+\cleardoublepage
+
+\phantomsection
+\pdfbookmark[0]{Contents}{contents}
+\tableofcontents*
+
+\mainmatter
+%%% MAIN REPORT %%%
+
+%% Introduction %%
+\chapter{Project description}
+\input{intro/description.tex}
+
+\part{Background}
+\chapter{Introduction}
+\input{intro/introduction.tex}
+
+%% ANALYSIS SPACE %%
+\part{Social and Environmental context}
+
+%% PACT-Analyse
+\chapter{PACT}
+\input{PACT_Analyse/P.tex}
+\input{PACT_Analyse/A.tex}
+\input{PACT_Analyse/C.tex}
+\input{PACT_Analyse/T.tex}
+
+%% SOLUTION SPACE %%
+\part{Solution} % placeholder navn
+
+\chapter{Design}
+%\input{solution/design.tex}
+
+\chapter{Implementation}
+%\input{solution/implementation.tex}
+
+\chapter{Test}
+%\input{solution/test.tex}
+
+\part{Evaluation and further work}
+%\input{taxonomy/taxonomy.tex}
+
+\chapter{Appendix}
+\section{Coding style}
+%\input{appendix/coding_style.tex}
+\section{Glossary}
+\label{glossary}
+\section{Inheritance diagram}
+
+%% APPENDIX SPACE %%
+\begingroup
+ \raggedright
+ \bibliography{bibtex/litterature}
+\endgroup
+
+\appendix
+\clearforchapter
+
+\phantomsection
+ \pdfbookmark[0]{Appendix}{appendix}
+
+\end{document}
