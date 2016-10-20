@@ -1,0 +1,35 @@
+\section{Information Acquisition \& Storage}
+%The application (client) runs on a handheld device, and needs a wealth of information about prices, statistics and sensory input from farming equipment.
+As defined in our system definition, it is essential for our application to handle a wealth of information about prices, statistics and sensory input from farming equipment. Witch makes it necessary to store information in some format, to do this we must choose the format most fitting to our use. We have therefore investigated the different kind.\todo{formulereing er fucked behov for fix.}
+% clientside 
+Collection of this information on the clients side will most likely result in a lot of overhead and complications, since the application is meant to be used by many users, on many devices, simultaneously. This means that e.g. 1500 running clients will result in 1500 collections of all the information, if collection happens client-side. 
+%serverside
+Another\unsure{More reasonable? Edit: det kan vi prob ikke udtale os om på nuværende tidspunkt} approach to acquisition and storage of information is to do it remotely, on a server. Gathering information server-side results in information being fetched once, and stored for later use by the clients.
+\unsure{dette fløler jeg ikke virker som den meta tekst der bør være i starten af en section, virker som om alt det om cilentside, burde være indsat under den nuværende subsection "Client-side acquisition"}
+% Vores system defination beskriver et program der skal håndtere en masse data. Det er af denne grund essentielt at opbevare informationen et sted og for at gøre dette, skal vi bruge en lagringsmekanisme. Vi vil derfor undersøge de forskellige lagringsmekanismer, som vi vudere relevante. Dette gøres for at finde frem til den mest brugbare til vores projekt. Eller noget.
+
+There are many ways to do data acquisition and storage, we've chosen to investigate \unsure{Bedre ord?} the methods we deemed most relevant.
+\subsection{Client-side acquisition}
+As previously mentioned, this method of data acquisition will require the client to poll a great number of online resources in order to get all of the information required for a satisfactory user experience, which will take time and bandwidth. Once all the information is downloaded, the client will have to parse the information and display it within the user interface. Furthermore, if data is gathered and stored client-side, all of the manual data entry will have to be redone for each device in a company. If one was to use this method, it would be reasonable to store the data locally, with one of the methods elaborated below, specifically in \autoref{Serialized Storage}. \info{Der er helt sikkert noget om dataforbrug, datastorage og batteritid her.}
+
+\subsection{Server-side acquisition and storage}
+When information is gathered and stored on a remote server, the client will be able to download compressed packages or chunks of information, which have already been interpreted and sorted. The server will have a daemon\unsure{tror der skal forklares hvad en daemon er hvis vi vil bruge ordet EDIT: har nu undersøgt hvad en daemon er, måske kan man bare behandle det som et fagbegreb} running which continuously polls predetermined online resources for information, parses it and stores the resulting information in a database.
+
+There are several options for storing the information, \change{Skriv mere som introducerer nedenstående bullshit.}
+
+\subsubsection{Database Management Systems}\todo{Skriv mere, sektionen er ufærdig.}
+The use of database management systems (DBMS) is most likely the most available, documented and straight forward method of storing large amounts of collected information, in a usecase such as ours.\unsure{hvorfor?} (strings and numbers related to objects) \todo{[Citation needed]} There is a plethora of DBMS' available, some of the more well known systems include MySQL, PostgreSQL, MongoDB, Oracle \& Microsoft SQL Server. Common for all of them except MongoDB is, that they implement the SQL (Structured Query Language) standard, and therefore work similarly.
+The interaction with these DBMS' can be, for the layman, imagined as MS Excel without a GUI. Information is arranged in columns and rows, and it can be sorted and manipulated. The major difference is, that data entry and sorting is done through queries, and not a GUI.
+To read and write information from and to a SQL database, one sends queries to the interface, such as the example below.
+\begin{lstlisting}[frame=single, language=SQL]
+SELECT * FROM Seeds WHERE price < 100.00 ORDER BY name;
+\end{lstlisting}
+This query will select (or print out) all rows in the Seeds table, where the price is below 100, ordered by name. This can be done over network, which means, as an example, that the client sends the above query, and the server returns 8 rows of data. The client never needs to know of the thousands of other rows, which makes this quite efficient.\unsure{This is probably dumb..}
+\todo{Mere forklaring om mysql kan finde data hurtigt i store tabeller, og det kan mobiler ikke. Dernæst så er SQL over gzipped webrequests effektivt. Moar bullshit.}
+
+\subsubsection{Serialized Storage}
+Vældig udførlig og velskrevet tekst findes her. Totally.
+Skriv shit om XML \& JSON, herunder mongodb->json relation.
+Forklar hvorfor det er bullshit.
+SQL > XML any day. % fanbooyy
+\todo{Skriv mere, sektionene er ufærdig.}

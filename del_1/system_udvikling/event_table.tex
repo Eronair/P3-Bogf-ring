@@ -1,0 +1,79 @@
+Initially the requirements that our contact has specified, in his problem domain, has to be translated into a series of events, that we can later translate into classes that handle objects in a software solution. Hence we will start the process of developing a solution by creating an event list that will depicts the requirements of the given problem domain that the contact has specified he needs solved.
+
+As such, the process of maintaining and running a field, under any given id, has to be split into a series of events that will give us the required data and/or structure needed.
+
+Maintenance of a field can therefore be put into the following events~\cite{lf:korndyrkelse}.
+
+\begin{itemize}[noitemsep]
+    \item Field identification
+    \item Tilling
+    \item Manure spreading
+    \item Harrowing
+    \item Seeding
+    \item Fertilizing
+    \item Pesticide spreading
+    \item Harvesting
+    \item Bale pressing
+\end{itemize}
+
+\textbf{Field identification} Is the necessity to know what field the following events are to take place on, and what needs to be done to the current field, as various different crops have different requirements to planting techniques.
+
+\textbf{Tilling} Is the action of tilling the soil, this may, or may not be precedes by stimulating growth to seeds left over from previous seasons of crops.
+
+\textbf{Manure spreading} Is the action of spreading animal fecal matter onto the field. This enhances the soil into fertile soil, which has a higher concentration of fertile minerals and/or chemicals that benefit the growth of crops.
+
+\textbf{Harrowing} Is the action of evening out the field, to prepare it for seeds. this is not a necessary stage, but is recommended to increase the yield and quality of the crops.
+
+\textbf{Seeding} Seeding the field follows the as the next step in growing crops, this is where seeds are applied, at different depths, to the field as to give the specific crop that is grown, the best possible chances to grow into good quality crops.
+
+\textbf{Fertilizing} Is done immediately after the seeds have been planted. This is to give the grops another layer of fertile mineral soil to grow in, and to increase the yield and quality of the crops.
+
+\textbf{Pesticide spreading} Is not done by all field owners, as some farmers prefer to grow their crops without the use of chemicals, using an organic growing technique. However, should the farmer chose to use pesticides, these are only applied to fields with a chance of crop infection, e.g. crickets, flies and/or worms.
+
+\textbf{Harvesting} Requires that the crops on the field are fully grown, and ready to be harvested. There are various different harvesting techniques depending on the crop. However, it is safe to say that some of the crops require that the field is more or less dry, as to prevent the actual yield from the field spoiling before it can be treated for preservation.
+
+\textbf{Bale pressing} Is only required when the crops leave a byproduct such as straw. This is most commonly done by pressing straw into rectangles, after the straw has dried for a period of time, dependent on the weather conditions in the region.
+
+These different events can be solved by using different objects, such as \textbf{Tractors}, which can be defined into a class of vehicles. Those tractors need \textbf{Drivers}, \textbf{Field equipment} and \textbf{Fuel}, which can all be defined in the classes \textbf{Labor}, \textbf{Equipment} and \textbf{Resources}. This gives us the possibility to make an event table, where we can crosscheck the different classes, and objects, with the different events that needs handling. This gives us an excellent tool to get an overview of the complexity of our problem field, and a resource to continue towards a solution to that problem field.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+    \hline
+         Event/Class & Field & Resources & Equipment & Vehicles & Labor & Yield \\\hline
+         Field identification & x &   &   &   &   &   \\\hline
+         Tilling       & x &   & x & x & x &   \\\hline
+         Manure        & x & x & x & x & x &   \\\hline
+         Harrowing     & x &   & x & x & x &   \\\hline
+         Seeding       & x & x & x & x & x &   \\\hline
+         Fertilizing   & x & x & x & x & x &   \\\hline
+         Pesticide     & x & x & x & x & x &   \\\hline
+         Harvesting    & x &   & x & x & x & x \\\hline
+         Bale pressing & x &   & x & x & x & x \\\hline
+    \end{tabular}
+    \caption{Event Table}
+    \label{event_table}
+\end{table}
+
+As seen in \ref{event_table} different classes have been applied to solve the events that we know has to take place to sustain a field and grow crops. Here the "x"'s represent the interaction between the event, and the classes that help solve the specific event, and hence how the classes have an impact on the problem field. Next step is to determine the behavior between the different events and classes.
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+    \hline
+         Event/Class & Field & Resources & Tending & Vehicles & Labor & Yield \\\hline
+         Field identification & + &   &   &   &   &   \\\hline
+         Tilling       & + &   & * & | & | &   \\\hline
+         Manure        & + & * &   & | & | &   \\\hline
+         Harrowing     & + &   & * & | & | &   \\\hline
+         Seeding       & + & * &   & | & | &   \\\hline
+         Fertilizing   & + & * &   & | & | &   \\\hline
+         Pesticide     & * & * &   & | & | &   \\\hline
+         Harvesting    & + &   & * & | & | & * \\\hline
+         Bale pressing & + &   & * & | & | & * \\\hline
+    \end{tabular}
+    \caption{Behavior Table}
+    \label{tab:behavior_table}
+\end{table}
+

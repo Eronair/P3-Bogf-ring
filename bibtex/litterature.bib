@@ -1,0 +1,285 @@
+%=============Templating=============%
+%% Website
+%% site:kort navn, skal være unikt
+%% Fuldt artikelnavn
+%% Udgivelsesmåned
+%% Udgivelsesår
+%% URL
+%% Dato hvorpå den er indsamlet. HUSK DET.
+% Optional fields: author, title, howpublished, month, year, note
+
+%% bruges til technologiske rapporter (aka academiske rapporter %%
+@techreport{label,
+	author = {author},	
+	title = {title},
+	year = {year},
+	month = {month},
+	address = {\url{url}},
+    note = {Visited: date}
+}
+%% Bruges som en go to label til udspecificerede kilder %%
+@manual{Label,
+    author = {author},
+	title = {title},
+	year = {year},
+	month = {month},
+	address = {\url{url}},
+    note = {Visited: date}
+}
+%% bruges til artikler, fra journaler (aka Aviser) %%
+@article{Label,
+	author = {author},
+	title = {title},
+    journal = {journal},
+    year = {year},
+	volume = {Artikel id: id number},
+	pages = {page number},
+    note = {Visited: date}
+}
+%% bruges til bøger %%
+@inbook{label,
+	author = {author},
+    title = {title},
+    year = {year},
+    chapter = {chapter number},
+    pages = {page number},
+    address = {\url{url}},
+    note = {Visited: date}
+}
+% Sources bruges ved \cite{label}
+%=============Templating=============%
+
+@manual{sensor:jd_sensors,
+  author = {John Deere},
+  title = {Sensors},
+  year = {2016},
+  address = {\url{https://www.deere.com/en_US/products/equipment/sensors/sensors.page}},
+  note = {[20/10/2016]},
+}
+@manual{sensor:manure-sensor,
+  author = {John Deere},
+  title = {Manure Sensing},
+  year = {2016},
+  address = {\url{https://www.deere.com/en_INT/products/equipment/agricultural_management_solutions/precision_farming_solutions/manure_sensing/manure_sensing.page}},
+  note = {[11/10/2016]},
+}
+@manual{sensor:constituent,
+  author = {John Deere},
+  title = {Harvestlab constituent sensing},
+  year = {2016},
+  address = {\url{https://www.deere.com/en_US/products/equipment/ag_management_solutions/information_management/harvestlab_constituent_sensing/harvestlab_constituent_sensing.page}},
+  note = {[11/10/2016]},
+}
+
+@manual{sensor:brochure,
+  author = {John Deere},
+  title = {Harvestlab brochure},
+  address = {\url{https://www.deere.com/common/docs/products/equipment/agricultural_management_solutions/i_solutions/spfh_solutions/r2/brochure/harvestlab_brochure/YY0814807_E.pdf}},
+  note = {[11/10/2016]},
+}
+@manual{sensor:reedswitch,
+  author = {Coto Technology},
+  title = {Liquid level sensing using reed switch technology},
+  year = {2016},
+  address = {\url{http://cotorelay.com/wp-content/uploads/2014/05/LiquidLevelSensing-AppNote.pdf}},
+  note = {[11/10/2016]},
+}
+@manual{sensor:ultrasonic,
+  author = {Krohne},
+  title = {Measuring Principle ultrasonic flowmeters},
+  address = {\url{http://krohne.com/en/products/flow-measurement/ultrasonic-flowmeters/measuring-principle/}},
+  note = {[11/10/2016]},
+}
+@manual{sensor:gps,
+  author = {MiTAC},
+  title = {How does GPS work},
+  year = {2011},
+  address = {\url{http://www.mio.com/technology-gps-work.htm}},
+  note = {[11/10/2016]},
+}
+@manual{sensor:gps_physics,
+  author = {physics},
+  title = {How does GPS work?},
+  address = {\url{http://www.physics.org/article-questions.asp?id=55}},
+  note = {[20/10/2016]},
+}
+
+
+@manual{dlg:case_maxxum_130,
+  author = {dlg},
+  title = {PowerMix - CASE IH MAXXUM 130 SPS},
+  year = {2012},
+  month = {5},
+  address = {\url{http://www.dlg-test.de/pbdocs/traktoren/CASE_IH_MAXXUM_130_SPS.pdf}},
+  note = {[11/10/2016]},
+}
+@manual{dlg:john_deere_6125R,
+  author = {dlg},
+  title = {PowerMix - John Deere 6125R AutoQuad},
+  year = {2012},
+  month = {11},
+  address = {\url{http://www.dlg-test.de/pbdocs/traktoren/JD6125R_AutoQuad.pdf}},
+  note = {[11/10/2016]},
+}
+@manual{dlg:fendt-313-scr,
+  author = {dlg},
+  title = {PowerMix - Fendt 313 SCR},
+  month = {6},
+  year = {2013},
+  address = {\url{http://www.dlg-test.de/tests/Fendt-313-SCR_de.pdf}},
+  note = {[11/10/2016]},
+}
+@manual{dlg:fendt-724-scr,
+  author = {dlg},
+  title = {PowerMix - Fendt 724 Vario SCR},
+  month = {8},
+  year = {2012},
+  address = {\url{http://www.dlg-test.de/pbdocs/traktoren/Fendt-724-SCR_de.pdf}},
+  note = {[11/10/2016]},
+}
+@manual{dlg:claas_arion_650,
+  author = {dlg},
+  title = {PowerMix - CLAAS ARION 650 CIS},
+  month = {4},
+  year = {2013},
+  address = {\url{http://www.dlg-test.de/pbdocs/traktoren/CLAAS_ARION_650CIS.pdf}},
+  note = {[11/10/2016]},
+}
+@manual{dlg:claas_axion_850,
+  author = {dlg},
+  title = {PowerMix - CLAAS AXION 850 Hexashift},
+  month = {9},
+  year = {2013},
+  address = {\url{http://www.dlg-test.de/tests/Claas_AXION-850-Hexashift-de.pdf}},
+  note = {[11/10/2016]},
+}
+@manual{dlg:fendt_939,
+  author = {dlg},
+  title = {PowerMix - Fendt 939 Vario S4},
+  month = {7},
+  year = {2015},
+  address = {\url{http://www.dlg-test.de/tests/Fendt-939-Vario-S4_de_neu.pdf}},
+  note = {[11/10/2016]},
+}
+@manual{dlg:john_deere_8335,
+  author = {dlg},
+  title = {PowerMix - John Deere 8335R PowerShift},
+  month = {9},
+  year = {2011},
+  address = {\url{http://www.dlg-test.de/pbdocs/traktoren/JohnDeere8335R_PS.pdf}},
+  note = {[11/10/2016]},
+}
+@manual{dlg:claas_axion_950,
+  author = {dlg},
+  title = {PowerMix - CLAAS AXION 950 CMATIC},
+  month = {4},
+  year = {2012},
+  address = {\url{http://www.dlg-test.de/pbdocs/traktoren/CLAAS_AXION_950.pdf}},
+  note = {[11/10/2016]},
+}
+@manual{erfarland:dieselforbrug,
+  author = {Karl Jørgen Nielsen},
+  title = {Dieselforbruget i landbruget},
+  month = {3},
+  year = {2013},
+  address = {\url{https://erfaland.dk/ekspertblogs/dieselforbruget-i-landbruget.html}},
+  note = {[12/10/2016]},
+}
+@manual{lf:korndyrkelse,
+	author = {Landbrug og fødevare},	
+	title = {Dyrkning af korn},
+	month = {2},
+	year = {2013},
+	address = {\url{http://www.lf.dk/viden-om/landbrugsproduktion/planter/korn}},
+    note = {[11/10/2016]},
+}
+@manual{statista:global_tablet_shipments,
+    author = {statista},
+    title = {Global tablet shipments from 2010 to 2015, by operating system},
+    month = {},
+    year = {2016},
+    address = {\url{https://www.statista.com/statistics/273268/worldwide-tablet-sales-by-operating-system-since-2nd-quarter-2010/}},
+    note = {[17/10/2016]},
+}
+@manual{google:android_specs,
+    author = {google},
+    title = {Sensors Overview},
+    year = {2016},
+    address = {\url{https://developer.android.com/guide/topics/sensors/sensors_overview.html}},
+    note = {[17/10/2016]},
+}
+%% Android information
+@manual{netmarketshare:tablet_os,
+    author = {netmarketshare.com},
+    title = {Mobile/Tablet Operating System Market Share},
+    month = {9},
+    year = {2016},
+    address = {\url{https://www.netmarketshare.com/operating-system-market-share.aspx?qprid=8&qpcustomd=1}},
+    note = {[18/10/2016]}
+}
+@manual{android:latest_version,
+    author = {android.com},
+    title = {Android 7.0 Nougat},
+    month = {8},
+    year = {2016},
+    address = {\url{https://www.android.com/versions/nougat-7-0/}},
+    note = {[18/10/2016]}
+}
+@manual{edbpriser:android,
+    author = {edbpriser.dk},
+    title = {Tablet - sammenlign priser blandt 615 tablet produkter},
+    month = {10},
+    year = {2016},
+    address = {\url{http://www.edbpriser.dk/computer/tablet.aspx?type-os=\%5BAndroid\%2CAndroid+4.0\%2CAndroid+4.1+(Jelly+Bean)\%2CAndroid+4.2+(Jelly+Bean)\%2CAndroid+4.2.2+(Jelly+Bean)\%2CAndroid+4.3+(Jelly+Bean)\%2CAndroid+4.4+(KitKat)\%2CAndroid+4.4.2+(KitKat)\%2CAndroid+4.4.4+(KitKat)\%2CAndroid+5.0+(Lollipop)\%2CAndroid+5.1\%2CAndroid+5.1+(Lollipop)\%2CAndroid+6.0+(Marshmallow)\%5D&count=10&sort=Popularity&rlm=List}},
+    note = {[18/10/2016]}
+}
+@manual{edbpriser:windows,
+    author = {edbpriser.dk},
+    title = {Tablet - sammenlign priser bland 615 tablet produkter},
+    month = {10},
+    year = {2016},
+    address = {\url{http://www.edbpriser.dk/computer/tablet.aspx?type-os=\%5BMicrosoft+Windows+Embedded+Standard+7\%2CMicrosoft+Windows+RT\%2CWindows+10\%2CWindows+10+Home\%2CWindows+10+Home+32-bit+Edition\%2CWindows+10+Home+64-bit+Edition\%2CWindows+10+Pro\%2CWindows+10+Pro+32-bit+Edition\%2CWindows+10+Pro+64-bit+Edition\%2CWindows+8\%2CWindows+8+32-bit+Edition\%2CWindows+8+64-bit+Edition\%2CWindows+8+Pro\%2CWindows+8+Pro+64-bit+Edition\%2CWindows+8.1\%2CWindows+8.1+32-bit+Edition\%2CWindows+8.1+64-bit+Edition\%2CWindows+8.1+Pro\%2CWindows+8.1+Pro+32-bit+Edition\%2CWindows+8.1+Pro+64-bit+Edition\%2CWindows+8.1+Pro+64-bit+Edition+Academic\%2CWindows+8.1+SST\%2CWindows+8.1+SST+32-bit+Edition\%2CWindows+8.1+med+Bing\%2CWindows+8.1+med+Bing+32-bit+Edition\%2CWindows+Embedded+8.1+Handheld\%2CWindows+Embedded+8.1+Industry+64-bit+Edition\%2CWindows+Embedded+8.1+Industry+Pro\%5D&count=10&sort=TotalPrice&rlm=List}},
+    note = {[18/10/2016]}
+}
+@manual{uk.complex:google_buys_android,
+    author = {Alex Bracetti},
+    title = {The 15 Most Important Tech Acquisitions of All Time},
+    month = {1},
+    year = {2013},
+    adress = {\url{http://uk.complex.com/pop-culture/2013/01/the-15-most-important-tech-acquisitions-of-all-time/}},
+    note = {[19/10/2016]}
+}
+% iOS - Operating systems sources
+@manual{xiao:claud,
+    author = {Claud Xiao},
+    title = {Novel Malware XcodeGhost Modifies Xcode, Infects Apple iOS Apps and Hits App Store},
+    month = {10},
+    year = {2015},
+    address = {\url{http://researchcenter.paloaltonetworks.com/2015/09/novel-malware-xcodeghost-modifies-xcode-infects-apple-ios-apps-and-hits-app-store/}},
+    note = {[19/10/2016]}
+}
+@manual{macworld:iosreleasedate,
+    author = {David Price},
+    title = {iOS 10 release date UK},
+    month = {9},
+    year = {2016},
+    address = {\url{http://www.macworld.co.uk/feature/iosapps/ios-10-release-date-uk-best-new-features-3628012/}},
+    note = {[18/10/2016]}
+}
+@manual{apple:developerprogram,
+    author = {Apple},
+    title = {Choosing a membership},
+    month = {n/a},
+    year = {n/a},
+    address = {\url{https://developer.apple.com/support/compare-memberships/}},
+    note = {[19/10/2016]}
+}
+% Windows Phone - Operating system sources
+@manual{techradar:winphone7_releasedate,
+    author = {Mark Chacksfield},
+    title = {Windows Phone 7 UK release date: 21 October},
+    month = {11},
+    year = {2010},
+    address = {\url{http://www.techradar.com/news/phone-and-communications/mobile-phones/windows-phone-7-uk-release-date-21-october-719478}},
+    note = {[19/10/2016]}
+}

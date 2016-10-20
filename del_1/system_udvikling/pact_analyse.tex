@@ -1,0 +1,85 @@
+In this section, we will estimate the requirements, strengths and weaknesses of our target audience, their activities and the technological constraints, by utilising PACT-analysis and the information that we have gathered so far. This will enable us to move towards, and limit ourselves to, the technological requirements for the solution.
+
+%% People
+\textbf{People}\newline
+In regards to the people of the problem field, we will be dividing them into two categories Independent Farmers and Organized Farmers. We assume that independent farmers need a way to keep track of the resource use of any particular field, and have a need to know the time expenditure requirements of the field in question as well. 
+
+Organized farmers, on the other hand, have an organization behind that, may or may not, do the statistics and management work for them, as such, a solution for organized farmers that have such internal structure, can be designed with an educated user in mind, as the organizations behind the farmers have the resources to educate their staff.
+
+However, ease of use, and a simple user interface makes a program easy for the Organized farmers that do not have a management branch. Though companies that strive to maintain these organizations with the farmers, often invest in new software solutions to maximize their potential profits, by decreasing the time spent on management and other none profitable activities.
+
+We assume that both categories of farmers have an average knowledge of technology equipment and software solutions within their field. This means that we expect farmers to have previous experience in using a computer, and/or mobile computer technology, with applications specific for farming and/or farm management.
+
+Based on our interview with our primary source Jens-Ole Larsen, we know that entrepreneurs that either rent out farm equipment or offer solutions for field tending have a need for IT-solutions that can give them concise statistics on the fields that they are tending. This is to create a better overview of what resources are needed to tend any given field that the entrepreneur has in his contracts, and thereby offer better solutions for their customers with more detailed information. It also offers the entrepreneur's a better tool to maximize their profits, as the time consumption of planning and executing their work would be reduced.  
+
+%% Activites
+\textbf{Activities}\newline
+Knowing that the entrepreneurs that we are in contact with, need this program to establish statistics on any given field, an understanding of the activities involved in tending a field is required. Therefore the following will strive to explain our expectations to what activities are involved in the function of field maintenance. However, the requisition of statistical data remains static-active throughout the tending period of the field, as to best establish a correct set of data to be statistically analysed by a program solution.
+
+%\textbf{The Temporal Aspect}\newline
+The activities will take place throughout the spring, summer and autumn period of the year. During this period a different activities are done on the field, to establish and secure a successful harvest, in the late summer early autumn period. This period can vary depending on the seasons weather conditions, and can therefore set new requirements as to what activities need to be done to secure the harvest. Also, some of the activities, such as plowing the field, are ongoing activities, meaning they have to be done in one continues activity, until they are done. Hence the collection of statistical data, should be done at the end of each activity, to better portray the statistics for any field, as data for halv a field does not serve any purpose. This sets some requirements to the responsiveness of the system. The system does not need to respond imidiately to the data being collected, but should be able to show data that has been collected within 5-10 seconds to secure a satisfactory User experience.
+
+%\textbf{Cooperation}\newline
+The activities on the field, require a varying degree of cooperation, as some of the activities can be done alone, such as harrowing the field, but other activities, such as the harvest, can require multiple people to cooperate to secure the harvest within a set time period. However, this does not mean that activities that are normally done alone, cannot become cooperative activities, as fields of larger size, might require two or more individuals to complete within a set time period. Hence the cooperation aspects of any given system has to give ample opportunity for one or more individuals to interact with it in any given activity.
+
+%\textbf{Complexity}\newline
+The activities are inherently well-defined, as they are delegated by an employer, or a single user. Furthermore, the nature of a large portion of the activities are very much a step by step procedure. Though some steps might be employed at an earlier or later state, or be repeated multiple times, such as spreading pesticides onto the field, as this activity is only done if the crops are threatened by infection, and done multiple times if striking down the infection has not been successfully achieved the first time.
+
+%\textbf{Safety-critical}\newline
+Though the complexity of the activities is a low form well-defined process with a low degree of variation depending on crops. It is however safe to say that the activities can be dangerous, as the activities require the operations of heavy machinery, such as Tractors, Combines and Plows and handling of dangerous chemicals. This means that there are some inherent risks of the systems input device breaking and a loss of data should this occur. This means that the system should have a robust \unsure{Jeg ved ikke om Robust er et godt ord at bruge?} input validation and error correction to deal with user error. Also, because the system in to be used in a situation where there is a driver involved, there should be considerations on how to least impact the drivers concentration. Hence the design of our User Interface (UI) and User Experience (UX) should take this into consideration, as to not break the drivers concentration with unnecessary information.
+
+%\textbf{The nature of the content}\newline
+The activities produce a large amount of data, some of which can be obtained through automatic data acquisition. However, a portion of the data produced through the activities need to be plotted into the system. However, this is numerical data, and only in occasional scenarios would it be necessary to use letters, such as when a new field or user is being added. 
+
+Due to the nature of the data, some restriction to access should be implemented, as to secure that the entrepreneur's data is not leaked to a third party, hence they can sustain an advantage by utilising the system without the data loss due to security. Furthermore the data should be presented in a way that increases usability of said data, hence numerical representation and/or graphical charts may be of value to the representation.
+
+\textbf{Context}\newline
+In regards to the physical constraints that the application might have, there are some consideration to be made depending on the platform. Utilising a mobile platform such as a tablet, smartphone or other portable devices presents other phisycal requirements then that of an stationary computer based in a private home or office. Hence execution on a portable has psysical constraints the naturally derive from the work environment that Intended users deal with on a daily basis, such as:
+\begin{itemize}[noitemsep]
+    \item Rain, sun glare, heavy wind or other weather hazards that might damage or destroy the device on which the application is being executed.
+    \item Distracting the user while driving or doing other important tasks that will require attention.
+    \item Power issues and Internet access out on the field.
+\end{itemize}
+Should the application be executed on a stationary computer, a lot of the distractions that are inherent on the portable devices are removed. However, the portability of the application is also removed, and hence it may not be the preferred solution as the user may want to have access to the data externally, but without having to be dependent on stationary computers at each individual location.
+
+Other then the psychical constraints that the application might have, dependent on the platform, another valid consideration is weather or not the Intended user is able to use the program. With this in mind, the application should be structured in a way, that gives the user an easy to manage overview of the application, with tooltips to describe the use of individual functions. This may make the learning curve gentler and hence raises the usability.
+
+Other then learning how to use the application, the user also needs incentive to use the application. Through some organisational advantages and possibilities of creating an overview of requirements per field, it may be possible for the user to establish and refine his/her profits. Some of the organisational advantages of the application are as follows:
+\begin{itemize}[noitemsep]
+    \item The program will enable the user to maximize profits, while minimizing expenses to hiring help, because an estimate for the amount of work required will be available way before it is needed, thus giving the opportunity to optimize the hiring procedure.
+    \item The program will also enable the user to get a better overview of the economy of his field(s), because he will be able to estimate expenses on each field separately and decide if the current approach is sufficiently profitable.
+    \item Savings will be possible when buying crops and equipment, because the user will be able to find offers in advance, instead of having to find something in the last minute, during the harvest/sowing/plowing period.
+\end{itemize}
+
+\textbf{Technologies}\newline
+As stated in \autoref{interview}, our main source, would like the application to execute on a tablet, as such we have to consider what the current tablet technology provides in terms of features. Hence we will be considering the technologies based on the most recent tablet technologies\cite{google:android_specs}. The decision of operating system (aka. the android OS) has been made upon their popularity\cite{statista:global_tablet_shipments}, and should give us the data needed to list the features specific for the platform type:
+
+\begin{itemize}[noitemsep]
+    \item Bluetooth connectivity
+    \item Wireless Internet connectivity (Wi-Fi)
+    \item Camera
+    \item GPS
+    \item Timer
+    \item Clock
+    \item Flashlight
+    \item Storage of digital information
+    \item Loudspeakers \& Mini-Jack output
+    \item Microphone
+    \item Touchscreen
+    \item Compass
+    \item Games
+    \item Digital Personal Assistant (Google Assistant)
+    \item Accelerometer
+    \item Haptic feedback / vibration motors.
+    \item GSM, HSPA(+), LTE (Cellular network)
+    \item NFC (Near Field Communication)
+\end{itemize}
+
+%\textbf{Input}
+The tablet has various input methods, of which primary and most notable is the touchscreen that allows easy input and replay of information at the same time, furthermore it provides physical buttons for basic controls such as on/off, home and volume control. Secondary inputs are voice control, which allowed the user to search or activate some functions on the tablet. Input devices can also be purchased separately in the form of a keyboard, which eases the use of making long inputs into the device. The keyboard and voice recognition inputs are only available on select models, but are still considered as input devices that have impact on the process.
+
+%\textbf{Output}
+The tablets output capabilities include a high-resolution 24-bit colour display, haptic feedback / vibration motors, built-in mono or stereo loudspeakers and a 3.5mm mini-jack plug for auxiliary audio. \todo{Source} \unsure{brug den samme kilde? da der må være information om disse ting der.} Information will primarily be delivered to the user through the display, as it is considered the primary output method and presents itself as the best solution for displaying statistical information. The secondary output include audio and haptic feedback. Audio can be used to relay information to the user, in a situation where short concise information is available, however large data amounts such as a statistical chart, might not be preferred. Haptic feedback could potentially be used to acquire attention, should a notice or warning arrise. 
+
+%\textbf{Communication}
+The tablet is designed to facilitate user to user interaction, and therefore has a wide range of communication features, such as phonecalls, Wi-Fi, bluetooth, GPS tracking, mobile data connection and NFC. These features are, as already stated, designed to keep interaction between users flowing, and as such the communication platform is already in place to distribute information between tablets or a remote server. Also the GPS tracking allows for an easy overview of the tablets position at any given time.

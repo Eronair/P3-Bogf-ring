@@ -1,5 +1,3 @@
-
-
 %%%% PACKAGES %%%%
 \usepackage{amsmath}
 
@@ -49,7 +47,7 @@
 
 % Kommentarer og rettelser med \fxnote. Med 'final' i stedet for 'draft' udloeser hver note en error i den faerdige rapport.
 \usepackage[footnote,draft,english,silent,nomargin]{fixme}		
-
+%% brugt til at skrive tale transcripts%%
 
 %%%% CUSTOM SETTINGS %%%%
 
@@ -232,3 +230,14 @@ basicstyle=\ttfamily\small,
 \usepackage{blindtext}
 \usepackage{scrextend}
 \addtokomafont{labelinglabel}{\sffamily}
+%% Extra ting som vi selv har sat på.
+\usepackage{xargs}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+\usepackage{longtable}
+%% Get superscript style citations with square brackets
+\usepackage[super]{natbib}
+\setcitestyle{square}

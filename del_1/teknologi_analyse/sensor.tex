@@ -1,0 +1,22 @@
+
+In this section we will elaborate on some of the currently used sensors and systems in the agricultural industry. We have written this section to define, and gain a basic understanding of, the input data that is currently available in the agricultural industry \cite{sensor:jd_sensors}. But first it should be said that the individual users have varying sensors available, so not all will have the mentioned sensors. \newline
+
+%\textbf{Near infrared sensor}
+
+One of the sensors that is currently present in the agricultural industry is the near infrared sensor. This sensor is used for analysing the constituents of manure, crops, silage and various other organic materials. It does this by exposing the material to near infrared light and analysing the refracted light\cite{sensor:manure-sensor}\cite{sensor:brochure}\cite{sensor:constituent}. \newline
+Which is interesting for us because it would allow the user to gain a overview of the quality of the input and output on the field. That data could be used to allow our application, to make better predictions on the expected quality of the output of the fields, based on the input. \newline
+
+%\textbf{Liquid level sensors}
+
+Another relevant sensor, that is used to keep track of fuel consumption, is the  liquid level sensor. This sensor is used for analysing the liquid level in a container. It does this by implementing some reed switches in the container, when the reed switches gets exposed to a magnetic field they react. The magnetic field we want to observe is emitted by a ring magnet mounted on a float. By determine what switches are affected by the floating magnet, the fluid level is determined\cite{sensor:reedswitch}.\newline
+Which allows us to get a reading of how much for example fuel a given tractor has consumed in the proses of plowing the field. Which would allow us to make a statistic of how much of a given liquid is used when doing a specific task. \newline
+
+%\textbf{GPS}
+
+GPS is also used in the agricultural industry. Essential to GPS are the satellites floating around earth. At all times at any position you should be in range of at least four satellites. Each of those will be sending their position and time of sending, constantly. The receiver then calculates your distance to the satellite, by comparing its internal time and the time sent by the sent by the satellite. By calculating the distance to the satellite you know you are somewhere in a sphere around the satellite. By finding the intersection between all of the spheres, the position of the receiver is found. This is refereed to as trilateration \cite{sensor:gps}\cite{sensor:gps_physics}.\newline
+This is interesting for us because it could be used track the movement of tractors and other machinery. By knowing the position we can for example see what vehicles are used for what work on what field. \newline
+
+%\textbf{Material flow sensors}
+
+Material flow sensors is another sensor currently used in the agricultural industry. This sensor is used for analysing the flow of a liquid through a pipe. There are many different types that all archive the same goal. For example ultrasonic sound can be used to detect this, it works by sending ultrasonic sound waves against and with the flow of the pipe. Sound moving against the flow will travel slower, so by compering the travel time of both its able to determine the speed of the liquid inside the pipe. When you have the speed of the liquid you it simply needs the diameter of the pipe, to calculate the volume of whatever liquid moving though the pipe\cite{sensor:ultrasonic}.\newline
+This will in combination with GPS give us a way to track where something like manure or pesticides is applied and the density within a certain area. \newline

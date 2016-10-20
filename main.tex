@@ -1,14 +1,23 @@
+%\todo[inline]{Brug \textbackslash todo\{\} til ting der mangler %at blive lavet.\newline
+%Brug \textbackslash unsure\{\} til ting i er usikre på om er %korrekte.\newline
+%Brug \textbackslash change\{\} til ting der helt sikkert skal %ændres.\newline
+%Brug \textbackslash info\{\} til generel info (useless).\newline
+%Brug \textbackslash improvement\{\} til at foreslå forbedringer.}
+
 \documentclass[a4paper,11pt,fleqn,twoside,openright]{memoir} 	% Openright aabner kapitler paa hoejresider (openany begge)
 \input{preamble_ida15}
 \raggedbottom
 
 \begin{document}
 
+% Set typeface to Times New Roman
+%\rmdefault{ptm} \todo{Fix later}
+
 \frontmatter
 
 \include{formalia/frontpage}
 \cleardoublepage
-\include{formalia/title}
+\include{formalia/title.tex}
 \cleardoublepage
 
 \chapter*{Preface}
@@ -19,6 +28,7 @@
 \phantomsection
 \pdfbookmark[0]{Contents}{contents}
 \tableofcontents*
+\listoftodos[Notes] %% List alle elementer lavet med \todo pakken
 
 \mainmatter
 %%% MAIN REPORT %%%
@@ -32,14 +42,9 @@
 \input{intro/introduction.tex}
 
 %% ANALYSIS SPACE %%
-\part{Social and Environmental context}
-
-%% PACT-Analyse %%
-\chapter{PACT}
-\input{PACT_Analyse/P.tex}
-\input{PACT_Analyse/A.tex}
-\input{PACT_Analyse/C.tex}
-\input{PACT_Analyse/T.tex}
+\chapter{Social and Technological Observations}
+\input{del_1/system_udvikling.tex}
+\input{del_1/teknologi_analyse.tex}
 
 %% SOLUTION SPACE %%
 \part{Solution} % placeholder navn
@@ -57,6 +62,8 @@
 %\input{taxonomy/taxonomy.tex}
 
 \chapter{Appendix}
+\input{appendix.tex}
+
 \section{Coding style}
 %\input{appendix/coding_style.tex}
 \section{Glossary}
@@ -65,14 +72,14 @@
 
 %% APPENDIX SPACE %%
 \begingroup
- \raggedright
- \bibliography{bibtex/litterature}
+\raggedright
+\bibliography{bibtex/litterature}
 \endgroup
 
 \appendix
 \clearforchapter
 
 \phantomsection
- \pdfbookmark[0]{Appendix}{appendix}
+\pdfbookmark[0]{Appendix}{appendix}
 
 \end{document}
